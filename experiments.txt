@@ -1,0 +1,18 @@
+/***** Formato dos experimentos ******/ 
+
+Features: 
+   TD-IDF;
+   BoW;
+   W2V;
+   Features Textuais;
+
+Experimentos serão uma condiguração combinando todas as features da seguinte forma:
+   1) TF-IDF;
+   2) BoW;
+   4) W2V;
+   5) Features Textuais;
+   6) TF-IDF + Features Textuais;
+   7) BoW + Features Textuais;
+   8) W2V + Features Textuais;
+   9) TF-IDF + BoW + W2V + Features Textuais;
+

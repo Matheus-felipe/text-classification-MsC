@@ -1,0 +1,32 @@
+Fakes Boatos shape (2555, 5)
+True News Boatos shape (10278, 6)
+Fakes Lupa shape (283, 7)
+Start: 2022-05-19 14:02:31.553155
+Initiating experiment with: 
+ Dataset: Boatos + Lupa 
+ Preprocessing: Yes 
+ Grid Search: Yes 
+ Classifier: MultinomialNB 
+
+Initiating Vectorization...
+End Vectorization!!!
+X treino: (4491, 45939)
+X teste: (1123, 45939)
+Y treino: (4491,)
+Y teste: (1123,)
+Initiating Grid Search...
+End Grid Search!!!
+Grid Search selected parameters: {'alpha': 1.0}
+Results:
+Accuracy: 
+ Mean: 90.56% STD: 0.0
+Precision: 
+ Mean: 93.08% STD: 0.0
+Recall: 
+ Mean: 88.26% STD: 2.220446049250313e-16
+F1 score: 
+ Mean: 90.60% STD: 2.220446049250313e-16
+Specificity: 
+ Mean: 88.26% STD: 2.220446049250313e-16
+End time: 2022-05-19 14:04:34.640287
+Duration: 0:02:03.087132

@@ -1,0 +1,32 @@
+Fakes Boatos shape (2555, 5)
+True News Boatos shape (10278, 6)
+Fakes Lupa shape (283, 7)
+Start: 2022-05-18 17:11:42.330349
+Initiating experiment with: 
+ Dataset: Boatos + Lupa 
+ Preprocessing: Yes 
+ Grid Search: Yes 
+ Classifier: RandomForestClassifier 
+
+Initiating Vectorization...
+End Vectorization!!!
+X treino: (4491, 45939)
+X teste: (1123, 45939)
+Y treino: (4491,)
+Y teste: (1123,)
+Initiating Grid Search...
+End Grid Search!!!
+Grid Search selected parameters: {'bootstrap': False, 'criterion': 'entropy', 'max_features': 'log2', 'n_estimators': 200}
+Results:
+Accuracy: 
+ Mean: 93.32% STD: 3.3306690738754696e-16
+Precision: 
+ Mean: 93.11% STD: 1.1102230246251565e-16
+Recall: 
+ Mean: 93.61% STD: 1.1102230246251565e-16
+F1 score: 
+ Mean: 93.36% STD: 2.220446049250313e-16
+Specificity: 
+ Mean: 93.61% STD: 1.1102230246251565e-16
+End time: 2022-05-18 18:29:15.707653
+Duration: 1:17:33.377304

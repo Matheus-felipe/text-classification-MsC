@@ -1,0 +1,17 @@
+Fakes Boatos shape (2555, 5)
+True News Boatos shape (10278, 6)
+Fakes Lupa shape (283, 7)
+Start: 2022-05-20 09:47:02.558084
+Initiating experiment with: 
+ Dataset: Boatos + Lupa 
+ Preprocessing: Yes 
+ Grid Search: Yes 
+ Classifier: GradientBoostingClassifier 
+
+Initiating Vectorization...
+End Vectorization!!!
+X treino: (4491, 45939)
+X teste: (1123, 45939)
+Y treino: (4491,)
+Y teste: (1123,)
+Initiating Grid Search...
