@@ -6,7 +6,7 @@ Features:
    W2V;
    Features Textuais;
 
-Experimentos serão uma condiguração combinando todas as features da seguinte forma:
+Experimentos serão algumas combinações de features da seguinte maneira:
    1) TF-IDF;
    2) BoW;
    4) W2V;
@@ -16,3 +16,9 @@ Experimentos serão uma condiguração combinando todas as features da seguinte 
    8) W2V + Features Textuais;
    9) TF-IDF + BoW + W2V + Features Textuais;
 
+Para cada configuração serão utilizados 5 modelos de classificação?
+   1) Random Forest;
+   2) XGBoost;
+   3) SVM;
+   4) Decision Tree;
+   5) Naive Bayes
