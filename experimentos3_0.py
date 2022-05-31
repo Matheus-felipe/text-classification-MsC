@@ -308,12 +308,16 @@ def run_experiments(hyperparameters = None,*,dataset, feature_config, gs_flag, c
 
   print('End Vectorization!!!')
 
+  fv = vecs[0]
+  tf_idf = vecs[1]
+  w2v = np.asarray(vecs[2])
+
   if (feature_config == "FV"):
-    data = vecs[0]
+    data = fv
   elif (feature_config == "TF_IDF"):
-    data = vecs[1]
+    data = tf_idf
   elif (feature_config == "W2V"):
-    data = vecs[2]
+    data = w2v
   elif (feature_config == "Features_Textuais"):
     data = dataset[['words_count',
                               'caracters_count',
@@ -322,28 +326,28 @@ def run_experiments(hyperparameters = None,*,dataset, feature_config, gs_flag, c
                               'words_per_sentence_avg',
                               'punctuations_per_sentence']]
   elif (feature_config == "TF_IDF_Features_Textuais"):
-    data = np.c_[vecs[1], dataset[['words_count',
+    data = np.c_[tf_idf, dataset[['words_count',
                               'caracters_count',
                               'sentences_count',
                               'characters_per_word_avg',
                               'words_per_sentence_avg',
                               'punctuations_per_sentence']]]
   elif (feature_config == "FV_Features_Textuais"):
-    data = np.c_[vecs[0], dataset[['words_count',
+    data = np.c_[fv, dataset[['words_count',
                               'caracters_count',
                               'sentences_count',
                               'characters_per_word_avg',
                               'words_per_sentence_avg',
                               'punctuations_per_sentence']]]
   elif (feature_config == "W2V_Features_Textuais"):
-    data = np.c_[vecs[2], dataset[['words_count',
+    data = np.c_[w2v, dataset[['words_count',
                               'caracters_count',
                               'sentences_count',
                               'characters_per_word_avg',
                               'words_per_sentence_avg',
                               'punctuations_per_sentence']]]
   elif (feature_config == "ALL"):
-    data = np.concatenate((vecs[0],vecs[1],vecs[0]), axis=1)
+    data = np.concatenate((fv,tf_idf,w2v), axis=1)
     data = np.c_[data, dataset[['words_count',
                                 'caracters_count',
                                 'sentences_count',
