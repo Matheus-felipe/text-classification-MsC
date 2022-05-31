@@ -296,8 +296,8 @@ def run_experiments(hyperparameters = None,*,dataset, feature_config, gs_flag, c
   else:
     with_preprocessing = 'No'
 
-  experiment_log = 'Initiating experiment with:'+'\n Preprocessing: {} \n Grid Search: {} \n Classifier: {} \n'
-  print(experiment_log.format(dataset_type,with_preprocessing, grid_search, classifier.__class__.__name__))
+  experiment_log = 'Initiating experiment with:'+'\n Preprocessing: {} \n Grid Search: {} \n Classifier: {} \n Feature Config: {} \n'
+  print(experiment_log.format(with_preprocessing, grid_search, classifier.__class__.__name__, feature_config))
   print('Initiating Vectorization...')  
 
   vecs = ''
