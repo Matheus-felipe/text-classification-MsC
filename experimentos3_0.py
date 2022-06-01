@@ -10,6 +10,7 @@ Original file is located at
 """
 
 import numpy as np
+from sklearn.preprocessing import MinMaxScaler, scale
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
@@ -268,7 +269,7 @@ def vectorization(dataset, threshold):
 def create_mean_matrix_w2c(sentences, model):
   matrix = []
   for sentence in sentences:
-    matrix.append([np.mean(model.wv[word]) if word in sentence.split() 
+    matrix.append([np.median(model.wv[word]) if word in sentence.split() 
                   else 0.0 
                   for word in model.wv.index_to_key
                    ])
@@ -308,9 +309,10 @@ def run_experiments(hyperparameters = None,*,dataset, feature_config, gs_flag, c
 
   print('End Vectorization!!!')
 
+  scaler = MinMaxScaler()
   fv = vecs[0]
   tf_idf = vecs[1]
-  w2v = np.asarray(vecs[2])
+  w2v = scaler.fit_transform(np.asarray(vecs[2]))
 
   if (feature_config == "FV"):
     data = fv
@@ -354,7 +356,6 @@ def run_experiments(hyperparameters = None,*,dataset, feature_config, gs_flag, c
                                 'characters_per_word_avg',
                                 'words_per_sentence_avg',
                                 'punctuations_per_sentence']]]
-
   
   Y = dataset['classification']
                                   
